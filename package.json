@@ -1,0 +1,24 @@
+{
+  "name": "md-issues",
+  "version": "0.0.0",
+  "description": "Output Github issue links.",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jprichardson/md-issues.git"
+  },
+  "keywords": [
+    "github",
+    "issues",
+    "markdown"
+  ],
+  "author": "JP Richardson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jprichardson/md-issues/issues"
+  },
+  "homepage": "https://github.com/jprichardson/md-issues#readme"
+}
