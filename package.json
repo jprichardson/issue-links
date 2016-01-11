@@ -1,24 +1,41 @@
 {
-  "name": "md-issues",
+  "name": "issue-links",
   "version": "0.0.0",
-  "description": "Output Github issue links.",
+  "description": "Output GitHub issue links.",
   "main": "index.js",
   "scripts": {
     "test": "standard"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jprichardson/md-issues.git"
+    "url": "git+https://github.com/jprichardson/issue-links.git"
   },
   "keywords": [
     "github",
     "issues",
-    "markdown"
+    "markdown",
+    "changelog",
+    "history",
+    "github-api"
   ],
   "author": "JP Richardson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jprichardson/md-issues/issues"
+    "url": "https://github.com/jprichardson/issue-links/issues"
   },
-  "homepage": "https://github.com/jprichardson/md-issues#readme"
+  "homepage": "https://github.com/jprichardson/issue-links#readme",
+  "dependencies": {
+    "github-issues-stream": "^1.0.1",
+    "meow": "^3.7.0"
+  },
+  "devDependencies": {
+    "standard": "5.x"
+  },
+  "bin": {
+    "issue-links": "./index.js"
+  },
+  "preferGlobal": true,
+  "standard": {
+    "parser": "babel-eslint"
+  }
 }
