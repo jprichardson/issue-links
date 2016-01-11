@@ -51,7 +51,7 @@ A LOT OF ISSUES
 
 You'd then paste this output at the bottom of your `CHANGELOG.md` or `HISTORY.md` file. Then you can easily reference
 the link your CHANGELOGS by writing `See: [#208][#208]` as opposed to just pasting the link and making your CHANGELOG
-files hard to read.
+files hard to read. See: https://github.com/jprichardson/node-fs-extra/commit/3a8a6e8ec30630ed4d9f07d2e839b4be659fa609 as an example.
 
 License
 -------
