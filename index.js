@@ -21,6 +21,7 @@ if (!cli.input[0]) {
 }
 
 let c = cli.flags.n || Infinity
+let maxLen = 0
 
 console.log('')
 ghIssues(cli.input[0], cli.flags)
@@ -41,11 +42,14 @@ ghIssues(cli.input[0], cli.flags)
 
 function outputLink (issue) {
   if (!issue) return
+
   let labels = issue.labels.map((label) => label.name).join(', ')
-	if (labels.length > 0) {
-		console.log(`<!--- ${issue.title} [${labels}] -->`)
-	} else {
-		console.log(`<!--- ${issue.title} -->`)
-	}
-	console.log(`[#${issue.number}]: ${issue.html_url}`)
+  let labelTitle = `"${issue.title}"`
+  if (labels.length > 0) labelTitle = `"${issue.title} [${labels}]"`
+
+  let mdLink = `[#${issue.number}]: ${issue.html_url}`
+  if (!maxLen) maxLen = mdLink.replace('pull/', 'issues/').length // in case first result is a pull request
+  let mdLinkPadded = mdLink + Array(maxLen - mdLink.length + 1).join(' ')
+
+  console.log(`${mdLinkPadded}    ${labelTitle}`)
 }
